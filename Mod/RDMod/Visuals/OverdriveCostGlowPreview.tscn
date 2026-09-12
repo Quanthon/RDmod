@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://pypnd1xdbn04"]
+
+[ext_resource type="PackedScene" uid="uid://bd3n6fn5wygbo" path="res://RDMod/Visuals/OverdriveCostGlow.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dawb0itvlo530" path="res://RDMod/images/energy_rainbow_dash.webp" id="2"]
+[ext_resource type="Script" uid="uid://csfjxwh7hq0mn" path="res://RDMod/Visuals/OverdriveCostGlowPreview.gd" id="3"]
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+bg_color = Color(0.07, 0.16, 0.23, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3, 0.56, 0.68, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="OverdriveCostGlowPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.025, 0.035, 0.05, 1)
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+theme_override_font_sizes/font_size = 22
+text = "Overdrive / 超速特效预览
+Space: 显示切换 / Toggle    +/-: 缩放 / Scale    O: 重叠 / Overlap
+编辑 OverdriveCostGlow.tscn 的 Modulate、Material 与根节点参数。"
+
+[node name="Cards" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 100.0
+offset_top = 210.0
+mouse_filter = 2
+
+[node name="Card" type="Panel" parent="Cards"]
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 310.0
+pivot_offset = Vector2(117.5, 155)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="Glow" parent="Cards/Card" instance=ExtResource("1")]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -5.0
+offset_right = 114.0
+offset_bottom = 119.0
+
+[node name="EnergyIcon" type="TextureRect" parent="Cards/Card"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 84.0
+offset_bottom = 89.0
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cost" type="Label" parent="Cards/Card"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 84.0
+offset_bottom = 89.0
+theme_override_colors/font_outline_color = Color(0.04, 0.07, 0.12, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 36
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Caption" type="Label" parent="Cards/Card"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 215.0
+text = "超速 / Overdrive"
+horizontal_alignment = 1

@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c3qio68broht7"]
+
+[ext_resource type="Shader" uid="uid://cxemdppujqtwb" path="res://RDMod/Visuals/OverdriveCostGlow.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://byd0wfj068b4q" path="res://RDMod/Visuals/OverdriveRainbowGradient.tres" id="3"]
+
+[resource]
+shader = ExtResource("2")
+shader_parameter/radius_expansion = 0.0
+shader_parameter/ease = 0.010000000475
+shader_parameter/modulo_width = 0.030000001425000002
+shader_parameter/width = 0.10000000475000001
+shader_parameter/ripple_speed = 0.050000002375
+shader_parameter/rainbow_gradient = ExtResource("3")
+shader_parameter/rainbow_saturation = 1.0
+shader_parameter/rainbow_brightness = 1.0000000475
+shader_parameter/rainbow_offset = 0.50000002375
+shader_parameter/rainbow_rotation_speed = 6.5197700016561555e-09
+shader_parameter/activation = 1.0
+shader_parameter/icon_size = Vector2(64, 64)
+shader_parameter/canvas_size = Vector2(128, 128)

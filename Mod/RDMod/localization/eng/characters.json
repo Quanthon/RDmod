@@ -1,0 +1,17 @@
+{
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.aromaPrinciple": "[sine][blue]I never leave my friends behind.[/blue][/sine]",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.banter.alive.endTurnPing": "Why so slow?",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.banter.dead.endTurnPing": "...",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.cardsModifierDescription": "Rainbow Dash cards will now appear in rewards and shops.",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.cardsModifierTitle": "Rainbow Dash Cards",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.description": "A swift pegasus from Equestria who never leaves a friend behind.\nTakes flight and Overdrives cards to push past her limits.",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.eventDeathPrevention": "My friends still need me. I’m not giving up!",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.goldMonologue": "[sine]I wonder if other ponies would accept these coins.[/sine]",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.possessiveAdjective": "her",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounObject": "her",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounPossessive": "hers",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounSubject": "she",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.title": "Rainbow Dash",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.titleObject": "Rainbow Dash",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.unlockText": "Play a single run with [pink]{Prerequisite}[/pink] to unlock this character."
+}

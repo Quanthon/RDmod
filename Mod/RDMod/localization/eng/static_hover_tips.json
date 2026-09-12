@@ -1,0 +1,8 @@
+{
+    "RD_MOD_OVERDRIVE_KEYWORD.title": "Overdrive",
+    "RD_MOD_OVERDRIVE_KEYWORD.description": "Play a card by overdrawing Energy. For each point of Energy {energyPrefix:energyIcons(1)} overdrawn, add an [red]Out of Control[/red] to your Hand.",
+    "RD_MOD_PREPARATION_KEYWORD.title": "Charge",
+    "RD_MOD_PREPARATION_KEYWORD.description": "Your next Attack deals 50% more damage.",
+    "RD_MOD_FLIGHT_KEYWORD.title": "Flight",
+    "RD_MOD_FLIGHT_KEYWORD.description": "Each stack of Flight reduces damage you take from enemy attacks by 1.\nAfter an enemy attacks you, lose 1 Flight next turn."
+}

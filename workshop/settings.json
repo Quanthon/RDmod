@@ -1,0 +1,9 @@
+{
+  "uploader": "../.tools/sts2-mod-uploader-v0.2.0/ModUploader.exe",
+  "description_file": "description.txt",
+  "change_note_file": "changelog.txt",
+  "github": {
+    "repository": "Quanthon/RDmod",
+    "cli": "../.tools/gh-2.100.0/bin/gh.exe"
+  }
+}

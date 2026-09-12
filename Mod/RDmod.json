@@ -1,0 +1,16 @@
+{
+  "id": "RDMod",
+  "name": "Rainbow Dash",
+  "author": "Quanthon",
+  "description": "Rainbow Dash character mod",
+  "version": "1.0.0",
+  "min_game_version": "0.111.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": [
+    {
+      "id": "STS2-RitsuLib"
+    }
+  ],
+  "affects_gameplay": true
+}

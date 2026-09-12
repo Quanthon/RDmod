@@ -1,0 +1,20 @@
+从根目录双击“编辑工坊资料.bat”可打开此文件夹。
+
+workshop.json：标题、可见性、标签和依赖。
+description.txt：详细介绍。
+changelog.txt：本次更新说明。
+image.png：封面，可替换为小于1MB的PNG。
+settings.json：上传器和文本文件路径。
+
+当前默认私密（private）。改成 public 后再次上传即可公开。
+上传入口会直接重新构建并上传，不再额外询问。
+仅预览请运行“准备工坊上传.bat”。
+
+首次上传后请备份 mod_id.txt 和 mod_id.backup.txt，用于以后更新同一工坊条目。
+完整说明：../docs/创意工坊上传工作流.md
+
+GitHub 开源仓库：Quanthon/RDmod；代码采用MIT，素材授权单独说明。
+首次先运行“登录GitHub.bat”登录Quanthon。
+“发布GitHub.bat”只发布源码、素材和完整安装包。
+“上传创意工坊.bat”会先发布GitHub，再上传Steam。
+描述图片放在media目录，用[img]media/文件名.png[/img]引用，支持GIF，自动生成直链。

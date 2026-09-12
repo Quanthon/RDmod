@@ -1,0 +1,22 @@
+{
+    "RD_MOD_RELIC_TAKE_OFF.title": "Rulebreaker",
+    "RD_MOD_RELIC_TAKE_OFF.description": "At the start of your turn, you can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] additional {OverdrivePower:plural:card|cards} this turn.",
+    "RD_MOD_RELIC_TAKE_OFF.flavor": "Rules? Catch me first.",
+    "RD_MOD_RELIC_UNSTOPPABLE.title": "Unstoppable",
+    "RD_MOD_RELIC_UNSTOPPABLE.description": "At the start of your turn, you can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] additional {OverdrivePower:plural:card|cards} this turn.",
+    "RD_MOD_RELIC_TEST1.title": "Rainbow Dash Plush",
+    "RD_MOD_RELIC_TEST1.description": "Whenever you play a card created during combat, gain [blue]{Block}[/blue] Block.",
+    "RD_MOD_RELIC_TEST2.title": "Badge",
+    "RD_MOD_RELIC_TEST2.description": "At the start of each combat, gain [blue]{PreparationPower}[/blue] Charge and [blue]{FlightPower}[/blue] Flight.",
+    "RD_MOD_RELIC_TEST3.title": "Element of Loyalty",
+    "RD_MOD_RELIC_TEST3.description": "Whenever you lose HP in combat, gain [blue]{FlightPower}[/blue] Flight.",
+    "RD_MOD_RELIC_TEST4.title": "Adventure Novel",
+    "RD_MOD_RELIC_TEST4.description": "At the start of each combat, add a random [gold]Daring Do card[/gold] into your Hand.",
+    "RD_MOD_RELIC_TEST5.title": "Electric Guitar",
+    "RD_MOD_RELIC_TEST5.description": "Whenever you gain Charge, gain [blue]{PreparationPower}[/blue] more Charge.",
+    "RD_MOD_RELIC_TEST6.title": "Ten Seconds Flat!",
+    "RD_MOD_RELIC_TEST6.description": "At the end of combat, gain [blue]{Gold}[/blue] Gold.\nEach turn you end reduces the Gold this Relic grants this combat by [blue]{GoldReduction}[/blue], to a minimum of 0.",
+    "RD_MOD_RELIC_TEST7.title": "Bottled Rainbow",
+    "RD_MOD_RELIC_TEST7.description": "Upon pickup, choose 1 of {Cards} cards of any color.\nAt the start of each combat, add that card into your [gold]Hand[/gold].",
+    "RD_MOD_RELIC_TEST7.selectionScreenPrompt": "Choose a card, or confirm without selecting one to skip."
+}

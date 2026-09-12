@@ -1,0 +1,8 @@
+{
+    "RD_MOD_OVERDRIVE_KEYWORD.title": "超速",
+    "RD_MOD_OVERDRIVE_KEYWORD.description": "透支能量打出一张牌。每透支一点{energyPrefix:energyIcons(1)}，将一张[red]失控[/red]加入手牌。",
+    "RD_MOD_PREPARATION_KEYWORD.title": "蓄力",
+    "RD_MOD_PREPARATION_KEYWORD.description": "你的下一张攻击牌额外造成50%伤害。",
+    "RD_MOD_FLIGHT_KEYWORD.title": "飞行",
+    "RD_MOD_FLIGHT_KEYWORD.description": "每层飞行使敌人对你造成的攻击伤害减少1点。\n敌人攻击后，你在下回合失去1层飞行。"
+}

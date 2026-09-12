@@ -1,0 +1,17 @@
+{
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.aromaPrinciple": "[sine][blue]我绝不会丢下朋友。[/blue][/sine]",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.banter.alive.endTurnPing": "干嘛那么慢？",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.banter.dead.endTurnPing": "……",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.cardsModifierDescription": "云宝的卡牌现在会出现在奖励和商店中。",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.cardsModifierTitle": "云宝卡牌",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.description": "来自小马利亚的天马，热爱速度，绝不丢下朋友。\n凭借飞行与超速，在战斗中不断突破极限。",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.eventDeathPrevention": "我还不能倒下，朋友们还需要我！",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.goldMonologue": "[sine]也不知道这些金币其他小马收不收。[/sine]",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.possessiveAdjective": "她的",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounObject": "她",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounPossessive": "她的",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.pronounSubject": "她",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.title": "云宝",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.titleObject": "云宝",
+    "RD_MOD_CHARACTER_RAINBOW_DASH_CHARACTER.unlockText": "用[pink]{Prerequisite}[/pink]进行一局游戏来解锁这个角色。"
+}

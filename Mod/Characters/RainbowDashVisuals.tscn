@@ -1,0 +1,197 @@
+[gd_scene load_steps=15 format=3 uid="uid://bbvdjv3wefvdt"]
+
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/stand.png" id="1_stand"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/stand_attack.png" id="2_stand_attack"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/stand_hit.png" id="3_stand_hit"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/flying.png" id="4_flying"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/flying_attack.png" id="5_flying_attack"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/flying_hit.png" id="6_flying_hit"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/dead.png" id="7_dead"]
+[ext_resource type="Texture2D" path="res://RDMod/images/characters/shadow.svg" id="8_shadow"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+length = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -215)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("1_stand")]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.78, 0.46)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.72)]}
+
+[sub_resource type="Animation" id="Animation_idle"]
+resource_name = "idle"
+length = 1.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -215)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("1_stand")]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.78, 0.46)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.72)]}
+
+[sub_resource type="Animation" id="Animation_flying_idle"]
+resource_name = "flying_idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/interp = 2
+tracks/0/keys = {"times": PackedFloat32Array(0, 1.2, 2.4), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, -249), Vector2(0, -257), Vector2(0, -249)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("4_flying")]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/interp = 2
+tracks/2/keys = {"times": PackedFloat32Array(0, 1.2, 2.4), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0.56, 0.34), Vector2(0.52, 0.31), Vector2(0.56, 0.34)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/interp = 2
+tracks/3/keys = {"times": PackedFloat32Array(0, 1.2, 2.4), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.44)]}
+
+[sub_resource type="Animation" id="Animation_attack"]
+resource_name = "attack"
+length = 0.28
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.1, 0.16, 0.28), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(0, -215), Vector2(24, -215), Vector2(24, -215), Vector2(0, -215)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("2_stand_attack")]}
+
+[sub_resource type="Animation" id="Animation_flying_attack"]
+resource_name = "flying_attack"
+length = 0.28
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.1, 0.16, 0.28), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(0, -249), Vector2(6, -257), Vector2(6, -257), Vector2(0, -249)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("5_flying_attack")]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.1, 0.28), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0.56, 0.34), Vector2(0.68, 0.3), Vector2(0.56, 0.34)]}
+
+[sub_resource type="Animation" id="Animation_hit"]
+resource_name = "hit"
+length = 0.28
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.07, 0.13, 0.28), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(0, -215), Vector2(-12, -215), Vector2(-7, -215), Vector2(0, -215)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("3_stand_hit")]}
+
+[sub_resource type="Animation" id="Animation_flying_hit"]
+resource_name = "flying_hit"
+length = 0.28
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.07, 0.13, 0.28), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(0, -249), Vector2(-14, -253), Vector2(-8, -251), Vector2(0, -249)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("6_flying_hit")]}
+
+[sub_resource type="Animation" id="Animation_take_off"]
+resource_name = "take_off"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot/Visuals:texture")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.12), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("1_stand"), ExtResource("4_flying")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot:position")
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.18, 0.3), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, -215), Vector2(0, -253), Vector2(0, -249)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.3), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.78, 0.46), Vector2(0.56, 0.34)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.3), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.44)]}
+
+[sub_resource type="Animation" id="Animation_land"]
+resource_name = "land"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot/Visuals:texture")
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.18), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("4_flying"), ExtResource("1_stand")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot:position")
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.14, 0.3), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(0, -249), Vector2(0, -237), Vector2(0, -215)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0, 0.3), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.56, 0.34), Vector2(0.78, 0.46)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0, 0.3), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.72)]}
+
+[sub_resource type="Animation" id="Animation_dead"]
+resource_name = "dead"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("MotionRoot:position")
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -215)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MotionRoot/Visuals:texture")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("7_dead")]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.9, 0.42)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.42)]}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {&"RESET": SubResource("Animation_reset"), &"attack": SubResource("Animation_attack"), &"dead": SubResource("Animation_dead"), &"flying_attack": SubResource("Animation_flying_attack"), &"flying_hit": SubResource("Animation_flying_hit"), &"flying_idle": SubResource("Animation_flying_idle"), &"hit": SubResource("Animation_hit"), &"idle": SubResource("Animation_idle"), &"land": SubResource("Animation_land"), &"take_off": SubResource("Animation_take_off")}
+
+[node name="RainbowDashCharacter" type="Node2D"]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, -18)
+scale = Vector2(0.78, 0.46)
+texture = ExtResource("8_shadow")
+modulate = Color(1, 1, 1, 0.72)
+
+[node name="MotionRoot" type="Node2D" parent="."]
+position = Vector2(0, -215)
+
+[node name="Visuals" type="Sprite2D" parent="MotionRoot"]
+unique_name_in_owner = true
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("1_stand")
+z_index = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("AnimationLibrary_main")}
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -180.0
+offset_top = -350.0
+offset_right = 180.0
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -360)
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -175)
+
+[node name="TalkPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -320)
