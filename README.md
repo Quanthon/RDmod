@@ -31,9 +31,11 @@ DLL 位于 `Mod/.godot/mono/temp/bin/Release/RDmod.dll`，与生成的 PCK 和 `
 ## 许可证 / License
 
 代码：MIT，见 [LICENSE](LICENSE)。图片和音频等见 [ASSET_NOTICE.md](ASSET_NOTICE.md)。
-当前测试环境和已知兼容边界见 [1.0.0 发布说明](docs/1.0.0发布说明.md)。
+1.0.0 已在游戏 v0.111.0、RitsuLib 0.5.20 下验证；早期测试版存档不保证兼容。
 
 ## 发布工具 / Publication tools
 
 一键GitHub与工坊发布流程见 [上传工作流](docs/创意工坊上传工作流.md)。
 使用这些可选工具需要 Python 与 Pillow（`python -m pip install Pillow`），以及按文档安装的 GitHub CLI 和官方 ModUploader；编译 Mod 本身不依赖这些发布工具。
+
+公开仓库仅包含 Godot 项目、工坊发布资料及其必要脚本；卡牌设计表、同步/绘图工具、自动调试和测试场景留在作者本地开发目录。

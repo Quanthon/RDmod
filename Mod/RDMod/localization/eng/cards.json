@@ -96,7 +96,7 @@
     "RD_MOD_CARD_DARING_DO_BIND_UP.description": "Heal {Heal:diff()} HP.",
     "RD_MOD_CARD_DARING_DO_CON.description": "At the end of combat, {DaringDoConPower:diff()} additional {DaringDoConPower:plural:card reward is|card rewards are} dropped.",
     "RD_MOD_CARD_DARING_DO_DODGE.description": "Prevent the next {BufferPower:diff()} {BufferPower:plural:time|times} you would lose HP.",
-    "RD_MOD_CARD_DARING_DO_FICTION.description": "{IfUpgraded:show:Choose 1 of 2 [gold]Daring Do cards[/gold] to add into your [gold]Hand[/gold].|Add a random [gold]Daring Do card[/gold] into your [gold]Hand[/gold].}",
+    "RD_MOD_CARD_DARING_DO_FICTION.description": "{IfUpgraded:show:Choose 1 of 2 random [gold]Daring Do cards[/gold] to add into your [gold]Hand[/gold].|Add a random [gold]Daring Do card[/gold] into your [gold]Hand[/gold].}",
     "RD_MOD_CARD_DARING_DO_PUZZLE.description": "If the other cards in your [gold]Hand[/gold] all have the same Energy cost or all have different Energy costs, play your [gold]Hand[/gold].",
     "RD_MOD_CARD_DARING_DO_ROB.description": "The enemy loses {EnemyStrengthLoss:diff()} [gold]Strength[/gold].\nGain {StrengthPower:diff()} [gold]Strength[/gold].",
     "RD_MOD_CARD_DARING_DO_STRIKE.description": "Deal {Damage:diff()} damage.\nStun the enemy.",

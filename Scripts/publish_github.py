@@ -70,11 +70,10 @@ def public_files(root: Path) -> dict[str, Path]:
             continue
         if path.suffix.lower() in SOURCE_TYPES:
             add(path)
-    for path in (root / 'Scripts').rglob('*.py'):
-        if '__pycache__' not in path.parts:
-            add(path)
-    for relative in ('.gitignore', 'README.md', 'LICENSE', 'ASSET_NOTICE.md', 'RDmod.sln',
-                     'docs/1.0.0发布说明.md', 'docs/创意工坊上传工作流.md',
+    for relative in ('.gitignore', 'README.md', 'LICENSE', 'ASSET_NOTICE.md',
+                     'Scripts/package_local_release.py', 'Scripts/publish_github.py',
+                     'Scripts/upload_workshop.py', 'Scripts/release_validation.py',
+                     'docs/创意工坊上传工作流.md',
                      'workshop/settings.json', 'workshop/workshop.json', 'workshop/description.txt',
                      'workshop/changelog.txt', 'workshop/image.png', 'workshop/使用说明.txt'):
         path = root / relative
@@ -119,7 +118,7 @@ def verify_raw(url: str, source: Path) -> None:
     raise RuntimeError(f'GitHub 图片尚不能匿名读取：{url}；{error}')
 
 
-def publish(root: Path, metadata: dict, archive: Path) -> dict:
+def publish(root: Path, metadata: dict, archive: Path, *, approved_removals: set[str] | None = None) -> dict:
     folder = root / 'workshop'
     repository, gh = github_config(folder)
     files = public_files(root)
@@ -145,7 +144,7 @@ def publish(root: Path, metadata: dict, archive: Path) -> dict:
     url = 'https://github.com/' + repository + '.git'
     credentials = ['-c', 'credential.helper=', '-c', f'credential.helper=!"{gh.as_posix()}" auth git-credential']
     def git(*args):
-        return run(['git', *credentials, *args], cwd=checkout)
+        return run(['git', '--literal-pathspecs', *credentials, *args], cwd=checkout)
     if not checkout.exists():
         run(['git', *credentials, 'clone', '--single-branch', '--branch', branch, url, str(checkout)])
     if git('remote', 'get-url', 'origin').stdout.strip() != url:
@@ -154,14 +153,21 @@ def publish(root: Path, metadata: dict, archive: Path) -> dict:
     # Keep failed local commits for a retry; refuse divergent history instead of forcing.
     git('merge', '--ff-only', 'origin/' + branch)
     index_file = checkout / '.rdmod-public-files.json'
+    removed = set()
     if index_file.exists():
         previous = set(json.loads(index_file.read_text(encoding='utf-8')))
         removed = previous - set(files)
-        if removed:
+        if removed - (approved_removals or set()):
             raise ValueError(f'先确认已移除源码的远程处理，再更新公开清单：{sorted(removed)}')
-    staged = set(git('diff', '--cached', '--name-only').stdout.splitlines())
-    if staged - set(files) - {'.rdmod-public-files.json'}:
+        for name in removed:
+            target = checkout / name
+            if not target.resolve().is_relative_to(checkout.resolve()) or '.git' in target.relative_to(checkout).parts:
+                raise ValueError('删除路径越界：' + name)
+    staged = set(filter(None, git('diff', '--cached', '--name-only', '-z').stdout.split('\0')))
+    if staged - set(files) - (approved_removals or set()) - {'.rdmod-public-files.json'}:
         raise ValueError('公开快照目录包含未列入发布清单的暂存改动。')
+    if removed:
+        git('rm', '--ignore-unmatch', '--', *sorted(removed))
     for name, source in files.items():
         target = checkout / name
         if not target.resolve().is_relative_to(checkout.resolve()):

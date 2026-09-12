@@ -15,7 +15,7 @@ import zipfile
 from pathlib import Path
 
 from package_local_release import read_json, validate_archive_entries, validate_release_version, sha256
-from debug_after_code import validate_localization_json, validate_native_keyword_localization
+from release_validation import validate_localization_json, validate_native_keyword_localization
 
 ROOT = Path(__file__).resolve().parent.parent
 WORKSHOP = ROOT / 'workshop'
