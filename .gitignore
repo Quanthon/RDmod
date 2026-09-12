@@ -31,3 +31,5 @@ __pycache__/
 
 /workshop/github-preview.json
 /workshop/github-published.json
+
+/workshop/github-published-files.json

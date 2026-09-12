@@ -1,9 +1,0 @@
-云宝黛西（Rainbow Dash）角色 Mod
-
-以蓄力、飞行和超速为核心机制，包含专属卡牌与遗物，支持简体中文和英文。
-需要订阅 RitsuLib。
-
-Rainbow Dash character mod featuring Charge, Flight and Overdrive, with custom cards and relics.
-Supports Simplified Chinese and English. Requires RitsuLib.
-
-[img]media/character.png[/img]

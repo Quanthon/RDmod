@@ -1,9 +1,9 @@
 {
     "RD_MOD_RELIC_TAKE_OFF.title": "Rulebreaker",
-    "RD_MOD_RELIC_TAKE_OFF.description": "At the start of your turn, you can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] additional {OverdrivePower:plural:card|cards} this turn.",
+    "RD_MOD_RELIC_TAKE_OFF.description": "You can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] {OverdrivePower:plural:card|cards} every turn.",
     "RD_MOD_RELIC_TAKE_OFF.flavor": "Rules? Catch me first.",
     "RD_MOD_RELIC_UNSTOPPABLE.title": "Unstoppable",
-    "RD_MOD_RELIC_UNSTOPPABLE.description": "At the start of your turn, you can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] additional {OverdrivePower:plural:card|cards} this turn.",
+    "RD_MOD_RELIC_UNSTOPPABLE.description": "You can [gold]Overdrive[/gold] [blue]{OverdrivePower}[/blue] {OverdrivePower:plural:card|cards} every turn.",
     "RD_MOD_RELIC_TEST1.title": "Rainbow Dash Plush",
     "RD_MOD_RELIC_TEST1.description": "Whenever you play a card created during combat, gain [blue]{Block}[/blue] Block.",
     "RD_MOD_RELIC_TEST2.title": "Badge",
